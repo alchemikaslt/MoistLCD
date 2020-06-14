@@ -1,3 +1,5 @@
+//#include <LiquidCrystal.h>
+//LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
@@ -18,7 +20,7 @@ void loop() {
   Serial.print("\n\nAnalog Value: ");
   Serial.print(sensorValue);
   
-  percentValue = map(sensorValue, 1023, 200, 0, 100);
+  percentValue = map(sensorValue, 1023, 375, 0, 100);
   Serial.print("\nPercentValue: ");
   Serial.print(percentValue);
   Serial.print("%");
